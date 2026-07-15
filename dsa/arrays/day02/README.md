@@ -24,9 +24,9 @@ Today I started learning Arrays from first principles instead of jumping directl
 - Update the largest whenever a bigger element is found.
 - Return the final largest element.
 
-**Time Complexity:** `O(n)`
+**Time Complexity:** O(n)
 
-**Space Complexity:** `O(1)`
+**Space Complexity:** O(1)
 
 ## Additional Learning
 
@@ -35,7 +35,7 @@ I also learned different ways to take array input in Python.
 - Hardcoded input
 - User input
 - Competitive programming input using `list(map(int, input().split()))`
-- How `input()`, `split()`, `map()` and `list()` work internally
+- How `input()`, `split()`, `map()` and `list()` work internally.
 
 ## Key Takeaway
 
