@@ -1,7 +1,7 @@
 # Problem: Check if an Array is Sorted
 
 # Example array
-arr = [1, 2, 4, 5, 7, 6, 8]
+arr = [3,4,5,1,2]
 
 def check_sorted(arr):
 
