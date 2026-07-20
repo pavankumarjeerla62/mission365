@@ -12,7 +12,9 @@ def check_sorted(arr):
         # If the current element is greater than the next element,
         # the ascending order is broken.
         if arr[i] > arr[i + 1]:
+            
             return False
+            
 
     # If no pair breaks the order,
     # the entire array is sorted.
@@ -20,4 +22,5 @@ def check_sorted(arr):
 
 # Print the result returned by the function.
 print(check_sorted(arr))
+
 
