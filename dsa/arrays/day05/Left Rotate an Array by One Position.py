@@ -1,21 +1,21 @@
-# Left Rotate an Array by One Position
+# # Left Rotate an Array by One Position
 
-arr = [1, 2, 3, 4, 5, 6]
+# arr = [1, 2, 3, 4, 5, 6]
 
-def leftRotate(arr):
-    # Save the first element before shifting
-    temp = arr[0]
+# def leftRotate(arr):
+#     # Save the first element before shifting
+#     temp = arr[0]
 
-    # Shift all elements one position to the left
-    for i in range(len(arr) - 1):
-        arr[i] = arr[i + 1]
+#     # Shift all elements one position to the left
+#     for i in range(len(arr) -1 ):
+#         arr[i] = arr[i + 1]
 
-    # Place the saved element at the last position
-    arr[len(arr) - 1] = temp
+#     # Place the saved element at the last position
+#     arr[len(arr) - 1] = temp
 
-    return arr
+#     return arr
 
-print(leftRotate(arr))
+# print(leftRotate(arr))
 
 
 # --------------------------------------------
