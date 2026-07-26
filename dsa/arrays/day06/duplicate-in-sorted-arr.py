@@ -11,16 +11,16 @@ def removeDuplicates(nums):
     write = 0
 
     # Read the array from the second element
-    for i in range(1, len(nums)):
+    for read in range(1, len(nums)):
 
         # If a new unique element is found
-        if nums[i] != nums[i - 1]:
+        if nums[read ] != nums[read - 1]:
 
             # Move the write pointer to the next position
             write += 1
 
             # Place the unique element at the write pointer
-            nums[write] = nums[i]
+            nums[write] = nums[read]
 
     # Return the number of unique elements
     return write + 1
