@@ -94,3 +94,123 @@ Whenever a problem asks you to:
 - Move specific elements (like zeroes)
 
 Think about the **Two Pointers** pattern before considering more complex solutions.
+
+---
+
+
+# Left Rotate an Array by D Positions
+
+## Problem Statement
+
+Given an array and a number `D`, rotate the array to the left by `D` positions.
+
+## Example
+
+```text
+Input:
+[1, 2, 3, 4, 5, 6, 7]
+D = 3
+
+Output:
+[4, 5, 6, 7, 1, 2, 3]
+```
+
+## Intuition
+
+In a left rotation, the first `D` elements move to the end, while the remaining elements shift to the left by `D` positions.
+
+For example:
+
+```text
+[1, 2, 3 | 4, 5, 6, 7]
+              ↓
+[4, 5, 6, 7 | 1, 2, 3]
+```
+
+## Brute Force Approach
+
+Rotate the array one position at a time and repeat this `D` times.
+
+**Time Complexity:** `O(n × D)`
+
+**Space Complexity:** `O(1)`
+
+## Better Approach
+
+Save the first `D` elements in a temporary array, shift the remaining elements left by `D` positions, and place the saved elements at the end.
+
+**Time Complexity:** `O(n)`
+
+**Space Complexity:** `O(D)`
+
+## Optimal Approach
+
+Use the **Reversal Algorithm**.
+
+For left rotation by `D`:
+
+1. Reverse the first `D` elements.
+2. Reverse the remaining elements.
+3. Reverse the entire array.
+
+Example:
+
+```text
+[1, 2, 3 | 4, 5, 6, 7]
+
+Reverse first part:
+[3, 2, 1 | 4, 5, 6, 7]
+
+Reverse second part:
+[3, 2, 1 | 7, 6, 5, 4]
+
+Reverse everything:
+[4, 5, 6, 7 | 1, 2, 3]
+```
+
+**Time Complexity:** `O(n)`
+
+**Space Complexity:** `O(1)`
+
+## Why `D % n`?
+
+If `D` is greater than the array length, some rotations are repeated.
+
+For example:
+
+```text
+n = 5
+D = 7
+
+7 % 5 = 2
+```
+
+Rotating by 7 positions is the same as rotating by 2 positions.
+
+## When to Use Each Approach
+
+* **Brute Force:** Easy to understand, but inefficient when `D` is large.
+* **Better:** Useful when extra memory is acceptable.
+* **Optimal:** Best when we need `O(n)` time and `O(1)` extra space.
+
+## Time & Space Summary
+
+| Approach    |       Time |  Space |
+| ----------- | ---------: | -----: |
+| Brute Force | `O(n × D)` | `O(1)` |
+| Better      |     `O(n)` | `O(D)` |
+| Optimal     |     `O(n)` | `O(1)` |
+
+## Lesson Learned
+
+* Rotation is a reusable array pattern.
+* The first `D` elements can be treated as one group.
+* The reversal algorithm rotates the array without using an extra array.
+* Complexity should be derived by counting the actual work performed.
+* `D % n` avoids unnecessary full rotations.
+
+## Next Topic
+
+Right Rotate an Array by D Positions
+
+
